@@ -112,17 +112,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ChatDialog.cs" />
+    <Compile Include="ChatResponse.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Dialogs\RootDialog.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AddressKey.cs" />
+    <Compile Include="Models\GlobalVars.cs" />
+    <Compile Include="Models\LuisResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Translator\AzureAuthToken.cs" />
+    <Compile Include="Translator\StateHelper.cs" />
+    <Compile Include="Translator\TranslationHandler.cs" />
+    <Compile Include="Translator\Translator.cs" />
+    <Compile Include="Utils\Settings.cs" />
+    <Compile Include="Utils\StringConstants.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="LUIS\Bot Hotel.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -130,6 +144,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
